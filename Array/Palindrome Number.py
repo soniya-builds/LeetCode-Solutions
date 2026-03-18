@@ -1,15 +1,21 @@
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        
-        # Negative numbers are not palindrome
         if x < 0:
             return False
         
-        list2 = list(str(x))     # convert number to list
-        copy_list2 = list2.copy()   # make copy
-        copy_list2.reverse()        # reverse copy
+        original = x
+        reversed_num = 0
         
-        if list2 == copy_list2:
-            return True
-        else:
-            return False
+        while x > 0:
+            digit = x % 10
+            reversed_num = reversed_num * 10 + digit
+            x //= 10
+        
+        return original == reversed_num
+    
+#For me Testing manually
+sol = Solution()
+
+print(sol.isPalindrome(121))   # True
+print(sol.isPalindrome(-121))  # False
+print(sol.isPalindrome(10))    # False
