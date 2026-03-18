@@ -7,3 +7,9 @@ class Solution:
                 return i
         return -1
     
+    
+sol = Solution()
+
+print(sol.strStr("sadbutsad", "sad"))   # Expected: 0
+print(sol.strStr("leetcode", "leeto"))  # Expected: -1
+print(sol.strStr("hello", "ll"))        # Expected: 2
