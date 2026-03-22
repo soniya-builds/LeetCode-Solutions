@@ -14,3 +14,5 @@ class Solution:
                 right = mid - 1
 
         return left
+    
+#left is used to insert in the correct position if the target is not found in the array.
